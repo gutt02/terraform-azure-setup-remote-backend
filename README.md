@@ -1,5 +1,15 @@
 # Terraform - Azure - Setup Remote Backend
 
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Scripts](#scripts)
+* [Resources](#resources)
+
+## Introduction
+
+Templates the setup the Terraform remoate backend in Azure.
+
 ## Scripts
 
 ### `add_service_principal.sh`
@@ -36,3 +46,8 @@
     * `<environment>` up to four characters `dev|int|poc|prod|qa|test`  * `TF_STATE_STORAGE_ACCOUNT_NAME="<STORAGE_ACCOUNT_NAME>"` name of the Azure Storage Account.
   * `TF_STATE_CONTAINER_NAME="statefiles"` name of the container in the Azure Storage Account.
   * `TF_STATE_KEY="${TF_STATE_ENV}.tfstate"` name of the state file in the container.
+
+## Resources
+
+(Create a service principal)[https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure?tabs=bash#create-a-service-principal]
+(Store Terraform state in Azure Storage)[https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli]
