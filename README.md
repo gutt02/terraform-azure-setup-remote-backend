@@ -10,6 +10,10 @@
 
 Templates the setup the Terraform remoate backend in Azure.
 
+## Azure Infrastructure
+
+![Azure Infrastructure Terraform Remote Backend](./doc/images/AzureInfrastructureGitHubActionsRunner.png)
+
 ## Scripts
 
 ### `add_service_principal.sh`
