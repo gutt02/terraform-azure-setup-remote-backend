@@ -47,7 +47,8 @@ Templates the setup the Terraform remoate backend in Azure.
   * `TF_STATE_ENV="<customer>-<project>-<environment>"` ID of the state file.
     * `<customer>` three characters of the customer.
     * `<project>` three characters of the project
-    * `<environment>` up to four characters `dev|int|poc|prod|qa|test`  * `TF_STATE_STORAGE_ACCOUNT_NAME="<STORAGE_ACCOUNT_NAME>"` name of the Azure Storage Account.
+    * `<environment>` up to four characters `dev|int|poc|prod|qa|test`
+    * `TF_STATE_STORAGE_ACCOUNT_NAME="<STORAGE_ACCOUNT_NAME>"` name of the Azure Storage Account.
   * `TF_STATE_CONTAINER_NAME="statefiles"` name of the container in the Azure Storage Account.
   * `TF_STATE_KEY="${TF_STATE_ENV}.tfstate"` name of the state file in the container.
 
