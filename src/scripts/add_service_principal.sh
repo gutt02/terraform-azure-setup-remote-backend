@@ -22,7 +22,7 @@ az account set --subscription ${SUBSCRIPTION_ID}
 # Creates the service principal
 # The password expires after 5 years
 az ad app create --display-name ${APP_NAME} --homepage "https://${APP_NAME}" --identifier-uris "http://${APP_NAME}"
-az ad sp create-for-rbac --name ${APP_NAME} --role "Contributor" --scopes "/subscriptions/$(${SUBSCRIPTION_ID})" --years 5
+az ad sp create-for-rbac --name ${APP_NAME} --role "Contributor" --scopes "/subscriptions/${SUBSCRIPTION_ID}" --years 5
 
 # Output:
 # {
@@ -36,7 +36,7 @@ az ad sp create-for-rbac --name ${APP_NAME} --role "Contributor" --scopes "/subs
 
 # Optional:
 # If permissions are to be assigned with the service principal, then assign the role `User Access Adminstrator``.
-az role assignment create --assignee "<OBJECT_ID>" --role "User Access Administrator" --scope "/subscriptions/$(${SUBSCRIPTION_ID})"
+az role assignment create --assignee "<OBJECT_ID>" --role "User Access Administrator" --scope "/subscriptions/${SUBSCRIPTION_ID}"
 
 # Optional:
 # Logout
